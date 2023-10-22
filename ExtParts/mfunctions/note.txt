@@ -1,0 +1,6 @@
+SAC agent location
+C:\Program Files\MATLAB\R2021b\toolbox\rl\rl\+rl\+agent
+
+
+retrive the episode number and instant trainStats, average power and episode runtime
+C:\Program Files\MATLAB\R2021b\toolbox\rl\rl\+rl\+train
