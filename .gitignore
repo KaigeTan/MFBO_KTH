@@ -1,0 +1,70 @@
+# Windows default autosave extension
+*.asv
+
+# OSX / *nix default autosave extension
+*.m~
+
+# Compiled MEX binaries (all platforms)
+*.mex*
+
+# Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
+
+# Generated helpsearch folders
+helpsearch*/
+
+# Simulink code generation folders
+slprj/
+sccprj/
+ExtParts/
+UDP_Send_Poi_2019a_openloop_joystick_ert_rtw/
+modelRobot/
+SavedFigure/
+# Matlab code generation folders
+codegen/
+
+# Simulink autosave extension
+*.autosave
+*.elf
+*.original
+
+# Simulink cache files
+*.slxc
+*.mat
+
+# Octave session info
+octave-workspace
+
+# Zip file
+*.zip
+*.7z
+
+# Ignore build artifacts
+build/
+*.hex
+*.bin
+
+# Ignore IDE and editor files
+.vscode/
+.project
+.cproject
+.settings/
+*.launch
+*.cproject
+*.project
+
+# Ignore generated files
+*_template.*
+*_generated.*
+
+# Ignore user-specific files
+*~
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignore Videos
+*.avi
+*.mp4
+*.mov
