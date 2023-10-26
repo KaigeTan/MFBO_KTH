@@ -5,7 +5,8 @@ Learning-enhanced Optimal Gait Design for a Tendon-driven Soft Quadruped Robot v
 <p align="left">
 </p>
 
-- 📫**kaiget@kth.se** or **xuezhin@kth.se**
+- 📫**kaiget@kth.se**
+- Or 📫**xuezhin@kth.se**
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> </a> </p>
