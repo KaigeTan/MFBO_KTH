@@ -13,8 +13,14 @@ import threading  # Allows for multi-threading support.
 import logging  # Provides logging capabilities for debugging and error tracking.
 from dataclasses import dataclass
 from typing import Any, Tuple, List, Optional
+import os
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='SoftQ.log',
+                    level=logging.INFO, format='%(asctime)s.%(msecs)03d - %(levelname)s - %(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S')
+
+# if os.path.exists('SoftQ.log'):
+#     os.remove('SoftQ.log')
 
 # ToF_12345=front,back,left,right,down
 # XSHUT = [18, 20, 21, 16, 7]
@@ -24,7 +30,7 @@ regs=[45, 0, 25, 0, 198, 255, 155, 254, 156, 255, 88, 255, 0, 0, 2, 0, 253, 255,
 remap=(1,0,2,0,1,0)
 
 # TCP Transmission
-HOST0 = '192.168.0.111'
+HOST0 = '192.168.0.103'
 PORT0 = 6666
 #HOST1 = '192.168.1.33'  # Standard loopback interface address (localhost)
 HOST1 = '0.0.0.0'
@@ -212,6 +218,7 @@ class SofQData:
         """
         Get the data to be sent to STM32 microcontroller.
 
+        
         This method combines the header, motor commands, relay commands, and terminators into 
         a single data packet to be sent to the STM32 microcontroller.
 
@@ -264,6 +271,7 @@ class SoftQ:
         self.serial_setup()
         self.Write_Read_STM32_thread()
         self.sensor_data.offset = self.sensor_data.read_set_offsets()
+        print('------Initialized------')
 
     def start(self):
         self.tcp.listen()
@@ -311,8 +319,11 @@ class SoftQ:
                 
                 self.set_countdown_flag(True)
                 self.data.relay_commands = bytearray([200, 200])
+                logging.info("%s", len(data_from_simulink))
             else:
-                print(len(data_from_simulink))
+                # print(len(data_from_simulink))
+                if len(data_from_simulink) != 0:
+                    logging.info("data_from_simulink %s", len(data_from_simulink))
         except:
             print('unReceived')
         
