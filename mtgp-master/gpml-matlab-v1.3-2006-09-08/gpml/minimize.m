@@ -136,7 +136,7 @@ while i < abs(length)                                      % while not finished
 
   if abs(d3) < -SIG*d0 && f3 < f0+x3*RHO*d0          % if line search succeeded
     X = X+x3*s; f0 = f3; fX = [fX' f0]';                     % update variables
-    % fprintf('%s %6i;  Value %4.6e\r', S, i, f0);
+    fprintf('%s %6i;  Value %4.6e\r', S, i, f0);
     s = (df3'*df3-df0'*df3)/(df0'*df0)*s - df3;   % Polack-Ribiere CG direction
     df0 = df3;                                               % swap derivatives
     d3 = d0; d0 = df0'*s;
