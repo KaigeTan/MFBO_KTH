@@ -17,7 +17,7 @@ helpsearch*/
 # Simulink code generation folders
 slprj/
 sccprj/
-ExtParts/
+# ExtParts/
 UDP_Send_Poi_2019a_openloop_joystick_ert_rtw/
 modelRobot/
 SavedFigure/
