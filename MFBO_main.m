@@ -1,10 +1,10 @@
 clear;clc;
 addpath(genpath('.\mtgp-master'));
-addpath(genpath('.\results'));
+addpath(genpath('.\data'));
 %% initial data
 rng(5)
 % Load dataset with 3D input (X) and 1D output (y)
-load('.\results\10pts_50iters.mat')
+load('.\data\BO\10pts_50iters.mat')
 num_data = 20;
 datax_fl_vec = X(1: num_data, :); % fl training inputs, N X 3
 Y_spd_fl_vec = Y_spd(1: num_data, 1); % fl training targets, N X 1
