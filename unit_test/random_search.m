@@ -19,7 +19,7 @@ n_round = 300;
 %rng(5);
 sampled_mat_in = zeros(n_round, 5); % design space: 4 params
 sampled_mat_out = zeros(n_round, 3);    % x_spd, enegry, COT
-
+tic
 % 5DOF: T, alpha, alpha_b_gain, z_l_gain, z_l_diff
 for i_iter = 1: n_round
     % oscillator parameters, randomized
@@ -42,6 +42,7 @@ for i_iter = 1: n_round
     fprintf('round: %d, spd: %.3d, energy: %.3d, COT: %.3d\n', ...
         i_iter, vx_avg, energy, COT);
 end
+t_cost = toc;
 % save results
 file_name = [parentFolder, '\data\random_search\init_pts_5DOFs', num2str(n_round), '.mat'];
 if exist([parentFolder, '\data\random_search\'], 'dir') ~= 7
