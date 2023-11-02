@@ -1,4 +1,4 @@
-# MTBO_KTH
+# MFBO_KTH
 Learning-enhanced Optimal Gait Design for a Tendon-driven Soft Quadruped Robot via Multi-fidelity Bayesian Optimization
 
 <h3 align="left">Connect with me:</h3>
@@ -15,11 +15,15 @@ Learning-enhanced Optimal Gait Design for a Tendon-driven Soft Quadruped Robot v
 
 The repository is structured as follows:
 
-- `mtgp-master`: This directory contains all of the function used in the MTBO. 
+- `Simulink_models`: This directory contains all Simulink files, including soft robot plant models and CPG oscillators.
 
-- `results`: This directory contains offline training results of the hyperparameters.
+- `data`: This directory contains generated data files for 1) offline training results, 2) benchmark method testing, and 3) prerequest data for online training.
 
-- `MFGP_main.m`: This m function file is to train SoftQ with online data.
+- `mtgp-master`: This directory contains all of the functions used in the MTBO. 
+
+- `unit_test`: This directory contains the main functions for the benchmark method testing and MFBO physical training Python code.
+
+- `MFGP_main.m`: This m function file is for MFBO physical training.
 
 - `CPG_online.slx`: This .slx files contains simulink model used for SoftQ online training.
 
