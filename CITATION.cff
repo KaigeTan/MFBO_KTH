@@ -11,6 +11,7 @@ authors:
     orcid: "https://orcid.org/0009-0003-2381-1850"
 license: "MIT"
 url: "https://github.com/KaigeTan/MFBO_KTH"
+date-released: "2025"
 preferred-citation:
   type: article
   title: "Optimal Gait Design for a Soft Quadruped Robot via Multi-Fidelity Bayesian Optimization"
@@ -30,7 +31,8 @@ preferred-citation:
     - family-names: "Törngren"
       given-names: "Martin"
       orcid: "https://orcid.org/0000-0002-4300-885X"
-  date-released: "2025"
+  doi: "10.1016/j.asoc.2024.112568"
+  year: "2025"
   journal: "Applied Soft Computing"
   volume: "169"
   pages: "112568"
